@@ -17,12 +17,12 @@
       </ul>
       <ul class="list footer__menu">
         
-        <li><a href="index.php">Главная</a></li>
-        <li><a href="index.php#services">Услуги</a></li>
-        <li><a href="index.php#routs">Направления</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/#services">Услуги</a></li>
+        <li><a href="/#routs">Направления</a></li>
         <li><a href="http://sveta-wp/бронирование/">Бронирование</a></li>
         <li><a href="http://sveta-wp/o-nas/">О нас</a></li>
-        <li><a href="index.php#contact">Контакты</a></li>
+        <li><a href="/#contact">Контакты</a></li>
       </ul>
       <div class="copyright">
         <div class="law">

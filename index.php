@@ -9,7 +9,7 @@ Template Name: Шаблон для главной
 
   <?php include 'includes/block-phones.php'?>
 
-  <section id="services" class="servises">
+  <section class="servises">
     <h2 class="title-section"><?php the_field('zagolovok_uslugi'); ?></h2>
     <div class="services__wrap container">
       <div class="wrapper-list-services">
@@ -81,7 +81,7 @@ Template Name: Шаблон для главной
     <p class="booking__slogan">Забронируйте поездку прямо сейчас</p>
     <p class="booking__call">Позвоните нам <?php include 'includes/phones.php'?></p>
     <p class="booking__online">или забронируйте <a href="http://sveta-wp/бронирование/">онлайн</a> на сайте</p>
-    <a class="order-btn" href="page-booking.php">Забронировать</a>
+    <a class="order-btn" href="http://sveta-wp/бронирование/">Забронировать</a>
   </div><!-- booking -->
 
   <div class="rates">
@@ -169,7 +169,7 @@ Template Name: Шаблон для главной
         <li class="list__item">
           <img class="routs__img" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title() ?>">
           <h3 class="routs__title"><?php the_title() ?></h3>
-          <a class="booking__link" href="./page-booking.php?title=<?php the_title() ?>">Заказать</a>
+          <a class="booking__link" href="http://sveta-wp/бронирование/?title=<?php the_title() ?>">Заказать</a>
           <div class="routs__overlay"></div>
         </li><!-- list__item -->
 

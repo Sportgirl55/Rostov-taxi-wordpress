@@ -9,7 +9,7 @@ Template Name: Страница - бронирование
   <?php include 'includes/block-phones.php'?>
   <div class="container_form">
     <span class="title-page form_title">Заполните форму</span>
-    <form class="form form-booking" action='./send.php' method='post'>
+    <form class="form form-booking" action='<?php bloginfo('template_url') ?>/send.php' method='post'>
 
       <div class="field">
         <label class="label" for="name">

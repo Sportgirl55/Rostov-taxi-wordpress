@@ -25,17 +25,12 @@
     <div class="container container_header">
       <a class="logo" href="/">
         <img class="logo__round" src="<?php bloginfo('template_url') ?>/img/logo.png" alt="Логотип РостовЮг Трансфер">
+        <div class="logo__text">
+          <h1>РостовЮг<span>Трансфер</span></h1>
+          <span class="logo__text-tiny">Междугороднее такси</span>
+        </div>
       </a>
-      <div class="logo__text">
-        <a class="logo" href="/">
-          <picture class="logo__text">
-            <source srcset="<?php bloginfo('template_url') ?>/img/logo-mobile.svg" media="(max-width: 480px)">
-            <source srcset="<?php bloginfo('template_url') ?>/img/logo-tablet.svg" media="(max-width: 1024px)">
-            <img src="<?php bloginfo('template_url') ?>/img/logo.svg" alt="Логотип РостовЮг Трансфер">
-          </picture>
-        </a>
-        <span class="logo__text-tiny">Междугороднее такси</span>
-      </div>
+
 
 
       <div class="header-contact-menu">
@@ -47,12 +42,12 @@
         </div>
         <nav class="nav">
           <ul class="list main-menu">
-            <li><a href="index.php">Главная</a></li>
-            <li><a href="index.php#services">Услуги</a></li>
-            <li><a href="index.php#routs">Направления</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/#services">Услуги</a></li>
+            <li><a href="/#routs">Направления</a></li>
             <li><a href="http://sveta-wp/бронирование/">Бронирование</a></li>
             <li><a href="http://sveta-wp/o-nas/">О нас</a></li>
-            <li><a href="index.php#contact">Контакты</a></li>
+            <li><a href="/#contact">Контакты</a></li>
           </ul>
           <button class="hamb" type="button">
             <span class="visually-hidden">открыть меню</span>

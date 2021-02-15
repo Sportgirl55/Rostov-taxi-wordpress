@@ -246,16 +246,32 @@ textarea {
 
 .logo {
     display: flex;
+    align-items: center;
 }
 
 .logo__round {
-    max-width: 70px;
+    width: 70px;
+    height: 70px;
     margin-right: 30px;
+}
+
+.logo__text {
+    flex: 1;
+}
+
+.logo__text h1 {
+    margin-bottom: 0;
+    color: #ffb55f;
+}
+
+.logo__text h1 span {
+    color: #19017a;
 }
 
 .logo__text-tiny {
     font-size: 18px;
     font-weight: 500;
+    color: var(--text);
 }
 
 /* HAMBURGER AND HIDDEN MENU */
@@ -370,7 +386,6 @@ textarea {
     position: absolute;
     display: none;
 }
-
 
 /* hero end */
 
@@ -1052,6 +1067,11 @@ form .order-btn {
         margin-right: 30px;
     }
 
+    .logo__text h1 {
+        font-size: 28px;
+        margin-right: 30px;
+    }
+
     .header-contact-menu {
         justify-content: space-between;
         flex: 1;
@@ -1131,8 +1151,25 @@ form .order-btn {
 
     /* about page end*/
 }
+@media (max-width: 1100px) {
+    /* .logo__text h1 {
+        margin-right: 15px;
+    } */
+
+    .phones_header {
+        display: none;
+    }
+}
 
 @media (max-width: 992px) {
+    .header-contact-menu {
+        flex: none;
+    }
+
+    .logo__text h1 {
+        margin-right: 15px;
+    }
+
     h2 {
         margin-bottom: 30px;
     }
@@ -1238,12 +1275,8 @@ form .order-btn {
         position: relative;
     }
 
-   .nav {
+    .nav {
         margin-left: auto;
-    }
-
-    .messengers_header {
-        display: none;
     }
 
     .messengers__hero {
@@ -1266,6 +1299,10 @@ form .order-btn {
     .main-title span {
         font-size: 30px;
         line-height: 40px;
+    }
+
+    .messengers_header {
+        display: none;
     }
 
     .title-section {
@@ -1523,11 +1560,28 @@ form .order-btn {
 }
 
 @media (max-width: 640px) {
+    .logo__text h1 {
+        line-height: 1;
+        font-size: 24px;
+    }
+
+    .logo__text h1 span {
+        display: block;
+    }
+
+    .logo__text-tiny {
+        display: none;
+    }
+
+    .logo__round {
+       width: 60px;
+       height: 60px;
+    }
     .phones-block {
         font-size: 20px;
     }
-  
-   .messengers__hero {
+
+    .messengers__hero {
         left: 0;
     }
 
@@ -1572,7 +1626,7 @@ form .order-btn {
     .rates__thumb {
         min-width: 45%;
     }
-  
+
     .rates__title {
         margin: 0;
         font-size: 30px;
@@ -1641,10 +1695,7 @@ form .order-btn {
         display: none;
     }
 
-    .header-contact-menu {
-        flex: none;
-    }
-
+  
     .phones-block {
         display: none;
     }
@@ -1674,8 +1725,8 @@ form .order-btn {
         min-height: 170px;
         padding-bottom: 0;
     }
-  
-      .messengers__hero {
+
+    .messengers__hero {
         top: 0;
         bottom: 0;
     }
@@ -1715,7 +1766,6 @@ form .order-btn {
     .rates .booking__link {
         width: 170px;
     }
-    
 
     .list_rates .list__item:nth-child(even) .rates__title {
         right: 10px;
@@ -1787,13 +1837,6 @@ form .order-btn {
         margin-bottom: 40px;
     }
 
-    /* .header-page.open .messengers {
-        display: flex;
-        position: absolute;
-        left: 30px;
-        top: 30px;
-    } */
-
     .header-page.open .close-menu {
         right: 30px;
     }
@@ -1816,10 +1859,8 @@ form .order-btn {
         flex-direction: column;
     }
 
-
     .rates__title {
         order: 1;
-        /* margin-top: -35px; */
         font-size: 26px;
     }
 
@@ -1828,12 +1869,7 @@ form .order-btn {
         flex-direction: column;
     }
 
-    .rates__thumb img {
-        /* margin: 0 0 auto; */
-    }
-
     .rates__content {
         margin-bottom: 30px;
-    
     }
 }
