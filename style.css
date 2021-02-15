@@ -1,0 +1,1839 @@
+/* common style */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+:root {
+    --titles: #19017a;
+    --text: #27323a;
+    --green: #016f19;
+    --orange: #ffb55f;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Montserrat Alternates", serif;
+    color: var(--text);
+    letter-spacing: 0.01em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover,
+button:hover {
+    opacity: 0.8;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Montserrat Alternates;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--titles);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 60px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="button"],
+input[type="date"],
+input[type="submit"],
+input[type="number"],
+input[type="time"],
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    display: block;
+    border: 2px solid #bfbfbf;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    display: none;
+}
+
+.list_social {
+    display: flex;
+    justify-content: center;
+}
+
+.list_social .list__item {
+    margin-right: 40px;
+}
+
+.list_social .list__item:last-child {
+    margin-right: 0;
+}
+
+.list_social .social__link {
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* common style end */
+
+/* header */
+.header-page {
+    padding: 20px 0;
+}
+
+.container_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-contact-menu {
+    display: flex;
+    align-items: center;
+}
+
+.messengers {
+    display: flex;
+}
+
+.messengers .messengers__item {
+    width: 30px;
+    height: 30px;
+    margin-right: 27px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.messengers__item_whatsapp {
+    background-image: url(./img/icons/contacts/icon-whatsapp.svg);
+}
+
+.messengers__item_viber {
+    background-image: url(./img/icons/contacts/icon-viber.svg);
+}
+
+.messengers__item_telegram {
+    background-image: url(./img/icons/contacts/icon-telegram.svg);
+}
+
+.phones_header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 100px;
+}
+
+.phones_header a {
+    color: var(--text);
+}
+
+.phones_header .phones__item:first-child {
+    margin-right: 20px;
+}
+
+.nav {
+    margin-left: 60px;
+}
+
+.main-menu {
+    display: none;
+}
+
+.hamb {
+    position: relative;
+    width: 40px;
+    height: 27px;
+    padding: 0;
+}
+
+.hamb__line {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--titles);
+    border-radius: 4px;
+}
+
+.hamb__line:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--titles);
+    border-radius: 4px;
+}
+
+.hamb__line:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--titles);
+    border-radius: 4px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo__round {
+    max-width: 70px;
+    margin-right: 30px;
+}
+
+.logo__text-tiny {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* HAMBURGER AND HIDDEN MENU */
+
+.close-menu {
+    display: none;
+}
+
+.header-page.open {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(25, 1, 122, 0.9) 13.54%,
+        rgba(72, 67, 143, 0.7) 78.65%,
+        rgba(114, 201, 228, 0.5) 96.87%
+    );
+    z-index: 50;
+    padding-top: 100px;
+    overflow-y: auto;
+}
+
+.header-page.open .container_header {
+    align-items: flex-start;
+}
+
+.header-page.open .logo,
+.header-page.open .logo__text {
+    display: none;
+}
+
+.header-page.open nav {
+    margin-left: 0;
+}
+
+.header-page.open .close-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 35px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(img/icons/icon-close-menu.svg);
+}
+
+.header-page.open .hamb {
+    display: none;
+}
+
+.header-page.open .messengers {
+    display: none;
+}
+
+.header-page.open .phones {
+    display: none;
+}
+
+.header-page.open .main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-page.open .main-menu li {
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.header-page.open .main-menu li a {
+    color: #ffffff;
+}
+
+/* HAMBURGER AND HIDDEN MENU */
+
+/* header end*/
+
+/* hero */
+.hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 620px;
+    text-align: center;
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/bg-hero.jpg);
+    background-position: center;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+.main-title {
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 50px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.main-title span {
+    font-weight: 500;
+}
+
+.messengers__hero {
+    position: absolute;
+    display: none;
+}
+
+
+/* hero end */
+
+/* block phones */
+.phones-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--titles);
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.phones-block .phones__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/icons/contacts/icon-phone.svg);
+    margin: 0 10px;
+}
+/* block phones end */
+
+/* FRONT-PAGE */
+
+/* services */
+.servises {
+    margin-bottom: 90px;
+}
+
+.servises .sub-title {
+    display: none;
+}
+
+.services__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-list-services {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.wrapper__item {
+    width: 100%;
+}
+
+.wrapper__item .list__item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.wrapper__item .list__item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/icons/icon-list-marker.svg);
+}
+/* services end */
+
+/* contacts */
+
+.contacts__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    color: #27323a;
+}
+
+.item-title {
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.item-title a {
+    text-decoration: underline;
+}
+
+.about-text {
+    font-size: 22px;
+    line-height: 42px;
+    letter-spacing: 0.02em;
+}
+
+.contacts__item .about-text {
+    margin-bottom: 5px;
+}
+
+.contacts__items .about-text a {
+    text-decoration: underline;
+}
+
+.contacts__items .messengers {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.contacts__item .about-text p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.contacts__phones {
+    margin-bottom: 40px;
+}
+
+.contacts__phones .phones__item {
+    display: block;
+    font-size: 32px;
+    color: var(--titles);
+    font-weight: bold;
+}
+
+.phones-block .phones__item {
+    border-bottom: 2px solid var(--orange);
+}
+
+.contacts__social {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.contacts__social .social__link_vk {
+    background-image: url(./img/icons/social/icon-vk.svg);
+}
+
+.contacts__social .social__link_facebook {
+    background-image: url(./img/icons/social/icon-facebook.svg);
+}
+
+.contacts__social .social__link_instagram {
+    background-image: url(./img/icons/social/icon-instagram.svg);
+}
+
+.contacts__social .social__link_twitter {
+    background-image: url(./img/icons/social/icon-twitter.svg);
+}
+
+.contacts__social .social__link_youtube {
+    background-image: url(./img/icons/social/icon-youtube.svg);
+}
+/* contacts end */
+
+/* booking */
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/bg-booking-front.jpg);
+    padding: 40px 15px;
+    margin-bottom: 90px;
+}
+
+.booking p {
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.booking a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: underline;
+}
+
+.booking .order-btn {
+    color: rgba(2, 134, 31, 0.8);
+}
+
+.order-btn {
+    padding: 11px 43px 11px 15px;
+    border: 2px solid var(--green);
+    color: rgba(2, 134, 31, 0.8);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url(./img/icons/icon-btn-booking.svg);
+    background-position: right 12px center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Montserrat Alternates", serif;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+.booking .phones__item {
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+/* booking end*/
+
+/* rates */
+
+.rates {
+    margin-bottom: 90px;
+}
+
+.booking__link {
+    position: relative;
+    padding: 12px 0;
+    font-size: 22px;
+    border-radius: 20px;
+    border: 2px solid var(--green);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.rates .booking__link:hover {
+    background: #ffffff;
+    color: var(--green);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url(./img/icons/icon-btn-booking.svg);
+    background-position: right 25px center;
+}
+
+.rates .booking__link {
+    font-weight: bold;
+    min-width: 240px;
+    background: radial-gradient(50% 50% at 50% 50%, #02861f 28.65%, #016f19 100%), rgba(2, 134, 31, 0.8);
+    color: #ffffff;
+}
+
+.routs .booking__link {
+    min-width: 200px;
+    opacity: 1;
+    color: rgba(2, 134, 31, 0.8);
+    background-color: #ffffff;
+}
+
+.routs .booking__link:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+.rates .list__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 75px);
+}
+
+.list_rates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rates__title {
+    color: var(--titles);
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+.rates__title,
+.rates__info {
+    text-align: center;
+}
+
+.rates__info {
+    margin-bottom: 50px;
+}
+
+.booking__btn {
+    text-align: center;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* rates end*/
+
+/* features */
+
+.features {
+    margin-bottom: 90px;
+}
+
+.list_features {
+    display: flex;
+}
+
+.features .list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 4 - 25px);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.features__icon {
+    margin-bottom: 40px;
+}
+
+.features__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    color: var(--titles);
+}
+
+.list__desc {
+    font-size: 22px;
+    line-height: 42px;
+    font-family: "Open Sans";
+    letter-spacing: 0.02em;
+}
+/* features end*/
+
+/* routs */
+
+.routs {
+    padding-bottom: 55px;
+}
+
+.routs .title-section {
+    margin-bottom: 90px;
+}
+
+.list_routs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list_routs .list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: calc(100% / 3 - 30px);
+    min-height: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.list_routs .list__item:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px grey;
+}
+
+.routs__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 100%;
+}
+
+.routs__title {
+    position: relative;
+    font-size: 32px;
+    color: var(--orange);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.routs__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(70, 70, 70, 0.5), rgba(70, 70, 70, 0.5));
+}
+
+/* routs end */
+
+/* footer */
+.footer-page {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        rgba(207, 238, 252, 0) 0%,
+        rgba(181, 228, 250, 0.32) 40.52%,
+        rgba(157, 219, 248, 0.8) 99.48%
+    );
+}
+
+.footer-page a {
+    color: var(--text);
+}
+
+.footer-page h3,
+.email-footer {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.email-footer,
+.phohes_footer {
+    margin-bottom: 70px;
+}
+
+.phohes_footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.email-footer a {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.social-title,
+.phones-title {
+    margin-bottom: 30px;
+}
+
+.footer__social {
+    margin-bottom: 60px;
+}
+
+.footer__social .social__link_vk {
+    background-image: url(./img/icons/social/footer/icon-vk-footer.svg);
+}
+
+.footer__social .social__link_facebook {
+    background-image: url(./img/icons/social/footer/icon-facebook-footer.svg);
+}
+
+.footer__social .social__link_instagram {
+    background-image: url(./img/icons/social/footer/icon-instagram-footer.svg);
+}
+
+.footer__social .social__link_twitter {
+    background-image: url(./img/icons/social/footer/icon-twitter-footer.svg);
+}
+
+.footer__social .social__link_youtube {
+    background-image: url(./img/icons/social/footer/icon-youtube-footer.svg);
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.footer__menu li {
+    font-size: 22px;
+    margin-right: 40px;
+}
+
+.footer__menu li:last-child {
+    margin-right: 0;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.law {
+    text-decoration: underline;
+}
+
+.law a:first-child {
+    margin-right: 30px;
+}
+
+/* footer end */
+
+/* FRONT-PAGE END*/
+
+/* BOOKING-PAGE */
+
+.container_form {
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+}
+
+.form_title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--titles);
+}
+
+.form-booking {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 20px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.label span,
+.radio span {
+    color: #bdbdbd;
+    font-weight: bold;
+}
+
+.input {
+    background: #f2f2f2;
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+textarea {
+    resize: vertical;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.field-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-group label,
+.radio-group {
+    width: calc(100% / 2 - 40px);
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    background: #f2f2f2;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+form .order-btn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 90px;
+}
+
+/* BOOKING-PAGE END */
+
+/* ABOUT-PAGE */
+
+.about {
+    margin-bottom: 90px;
+}
+
+.about .container {
+    max-width: 1320px;
+    padding: 0;
+}
+
+.service-taxi {
+    margin-bottom: 120px;
+}
+
+.wrapper-transfer {
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-taxi .transfer-text {
+    margin-right: 0;
+    margin-left: 90px;
+}
+
+.transfer {
+    color: #4f4f4f;
+    margin-bottom: 50px;
+}
+
+.transfer-text {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.transfer .about-text p {
+    margin: 0;
+}
+
+.transfer-img {
+    position: relative;
+    width: 640px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.transfer-img img {
+    width: 100%;
+}
+
+/* ABOUT-PAGE END */
+
+.btn-up {
+    position: absolute;
+    bottom: 200px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(img/icons/icon-btn-up.svg);
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1439px) {
+    .logo {
+        margin-right: 30px;
+    }
+
+    .header-contact-menu {
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .phones_header {
+        margin-left: 0;
+    }
+
+    .nav {
+        margin-left: 25px;
+    }
+
+    .booking p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .phones-block {
+        margin-bottom: 40px;
+    }
+
+    .rates .list__item {
+        width: calc(100% / 3 - 50px);
+    }
+
+    .contacts__phones {
+        margin-bottom: 25px;
+    }
+
+    /* booking page */
+
+    .container_form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .form-booking {
+        font-size: 16px;
+    }
+
+    .input {
+        font-size: 16px;
+    }
+    /* booking page end */
+
+    /* about page */
+
+    .about .container {
+        padding: 0 30px;
+    }
+
+    .services__wrap {
+        padding: 0 30px;
+    }
+
+    .about .about-text {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .wrapper-transfer {
+        padding: 0 15px;
+    }
+
+    .wrapper-transfer .item {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .service-taxi .transfer-text {
+        margin-left: 50px;
+    }
+
+    .transfer-text {
+        margin-right: 30px;
+    }
+
+    /* about page end*/
+}
+
+@media (max-width: 992px) {
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .wrapper-list-services {
+        width: 85%;
+        margin: auto;
+    }
+
+    .phones_header .phones__item {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .header-page .messengers .messengers__item {
+        margin-right: 15px;
+    }
+
+    .phones_header .phones__item:first-child {
+        margin-right: 0;
+    }
+
+    .phones_header .phones__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .services__wrap {
+        flex-direction: column;
+    }
+
+    .contacts__item {
+        width: 95%;
+        margin: 60px auto 0;
+    }
+
+    .booking .phones__item {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+
+    .rates .booking__link {
+        min-width: 200px;
+    }
+
+    .list_rates {
+        padding: 30px;
+    }
+
+    .rates .list__item {
+        width: calc(100% / 3 - 15px);
+    }
+
+    .footer__menu li {
+        font-size: 14px;
+        line-height: 14px;
+        margin-right: 20px;
+    }
+
+    /* about page */
+
+    .about {
+        margin-bottom: 15px;
+    }
+
+    .container_about {
+        flex-wrap: wrap;
+    }
+
+    .service-taxi {
+        margin-bottom: 50px;
+    }
+
+    .service-taxi .transfer-text {
+        margin: 0;
+    }
+
+    .transfer-text {
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .transfer .about-text p {
+        margin: revert;
+    }
+
+    .transfer-img {
+        display: none;
+    }
+
+    /* about page end */
+}
+
+@media (max-width: 768px) {
+    .phones_header,
+    .messengers_header {
+        display: none;
+    }
+
+    .hero {
+        min-height: 330px;
+        padding-bottom: 20px;
+        background-image: url(./img/bg-hero-tablet.jpg);
+        position: relative;
+    }
+
+   .nav {
+        margin-left: auto;
+    }
+
+    .messengers_header {
+        display: none;
+    }
+
+    .messengers__hero {
+        display: flex;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        min-height: 120px;
+        justify-content: space-between;
+
+        top: 30%;
+        bottom: 30%;
+    }
+
+    .main-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-title span {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .title-section {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .list_social .social__link {
+        width: 28px;
+        height: 20px;
+    }
+
+    .list_social .list__item,
+    .law a:first-child {
+        margin-right: 20px;
+    }
+
+    .item-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    /* services */
+
+    .servises {
+        margin-bottom: 60px;
+    }
+
+    .services__wrap {
+        padding: 0;
+    }
+
+    .wrapper-list-services {
+        padding: 0 30px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .wrapper__item {
+        width: calc(100% / 2 - 24px);
+    }
+
+    .wrapper-list-services .list__item {
+        font-size: 16px;
+        line-height: 26px;
+        padding-left: 25px;
+        margin-bottom: 0;
+    }
+
+    .wrapper-list-services .list__item::before {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* rates */
+
+    .rates__thumb {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .list__desc {
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        font-family: "Montserrat Alternates";
+    }
+
+    .rates .list__desc {
+        font-size: 18px;
+    }
+
+    .rates .booking__link {
+        min-width: 170px;
+        font-size: 18px;
+    }
+
+    /* booking */
+
+    .booking {
+        padding-bottom: 20px;
+        background-image: url(./img/bg-booking-front-tablet.jpg);
+        margin-bottom: 60px;
+    }
+
+    .booking p {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: normal;
+    }
+
+    .booking .booking__online {
+        margin-bottom: 30px;
+    }
+
+    .booking .phones__item {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 15px;
+    }
+
+    .booking .order-btn {
+        margin-top: 15px;
+    }
+
+    .booking .booking__call {
+        margin-bottom: 0;
+    }
+
+    .booking .booking__slogan {
+        margin-bottom: 15px;
+    }
+
+    /* features */
+
+    .features .list__item {
+        width: calc(100% / 2 - 50px);
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .list_features {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .features,
+    .routs .title-section {
+        margin-bottom: 60px;
+    }
+
+    .features__icon,
+    .features__title {
+        margin-bottom: 20px;
+    }
+
+    .features__title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    /* routs */
+
+    .routs {
+        padding-bottom: 70px;
+    }
+
+    .routs__title {
+        font-size: 28px;
+    }
+
+    .list_routs {
+        justify-content: center;
+    }
+
+    .list_routs .list__item {
+        width: calc(100% / 2 - 30px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        min-height: 250px;
+    }
+
+    /* footer */
+
+    .footer-page h3,
+    .email-footer,
+    .email-footer a {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: bold;
+        font-family: "Roboto";
+    }
+
+    .email-footer {
+        font-weight: bold;
+    }
+
+    .phohes_footer {
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: "Roboto";
+    }
+
+    .footer-page .title-section,
+    .phones-title,
+    .email-footer,
+    .social-title {
+        margin-bottom: 20px;
+    }
+
+    .footer__menu {
+        margin-bottom: 40px;
+    }
+
+    .copyright {
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        line-height: 12px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .copyright .author {
+        margin-top: 10px;
+    }
+
+    .law {
+        margin-bottom: 25px;
+    }
+
+    /* another pages */
+
+    .container_form {
+        margin: 0 auto 60px auto;
+    }
+
+    form .order-btn {
+        margin-top: 40px;
+    }
+
+    .header-page.open .close-menu {
+        right: 45px;
+    }
+
+    .radio {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    .booking__call {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phones-block {
+        font-size: 24px;
+    }
+
+    .features .title-section {
+        max-width: 80%;
+        margin: 0 auto 30px;
+    }
+
+    .wrapper__item {
+        width: calc(100% / 2 - 10px);
+    }
+
+    .btn-up {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .phones-block {
+        font-size: 20px;
+    }
+  
+   .messengers__hero {
+        left: 0;
+    }
+
+    .servises {
+        margin-bottom: 40px;
+    }
+
+    .wrapper-list-services,
+    .field-group {
+        flex-wrap: wrap;
+    }
+
+    .rates {
+        margin: 0;
+    }
+
+    .wrapper-list-services .wrapper__item,
+    .features .list__item,
+    .list_routs .list__item,
+    .list_rates .list__item {
+        width: 100%;
+    }
+
+    .wrapper-list-services .list__item {
+        font-size: 17px;
+    }
+
+    .wrapper__item:first-child {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .servises .sub-title {
+        display: block;
+    }
+
+    .list_rates {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .rates__thumb {
+        min-width: 45%;
+    }
+  
+    .rates__title {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .rates__info {
+        margin: auto;
+    }
+
+    .rates .booking__btn {
+        margin-bottom: 50px;
+    }
+
+    .rates__content {
+        display: flex;
+        margin: 10px 0;
+    }
+
+    .rates__content > div {
+        width: calc(100% / 2 - 15px);
+    }
+
+    .list_rates .list__item:nth-child(even) .rates__thumb {
+        order: 1;
+    }
+
+    .list__desc {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .booking {
+        margin-bottom: 60px;
+    }
+
+    .booking p {
+        font-size: 20px;
+    }
+
+    .routs__img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .footer__menu {
+        display: none;
+    }
+
+    .field-group label,
+    .radio-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .messengers_header,
+    .booking .booking__slogan,
+    .booking .booking__online,
+    .footer__menu {
+        display: none;
+    }
+
+    .header-contact-menu {
+        flex: none;
+    }
+
+    .phones-block {
+        display: none;
+    }
+
+    .list_features,
+    .list_routs {
+        display: block;
+    }
+
+    .nav {
+        margin-left: 0;
+    }
+
+    .main-title {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 4px;
+    }
+
+    .main-title span {
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .hero {
+        min-height: 170px;
+        padding-bottom: 0;
+    }
+  
+      .messengers__hero {
+        top: 0;
+        bottom: 0;
+    }
+
+    .messengers .messengers__item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-page.open .messengers {
+        display: none;
+    }
+
+    .title-section {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .wrapper-list-services {
+        padding: 0 5px;
+    }
+
+    .item-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .contacts__item .about-text {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    .contacts__phones .phones__item {
+        font-size: 22px;
+    }
+
+    .rates .booking__link {
+        width: 170px;
+    }
+    
+
+    .list_rates .list__item:nth-child(even) .rates__title {
+        right: 10px;
+    }
+
+    .list__item {
+        position: relative;
+    }
+
+    .services__wrap {
+        padding: 0 20px;
+    }
+
+    .booking a {
+        text-decoration: none;
+    }
+
+    .routs .title-section {
+        max-width: 50%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .features__icon,
+    .features__title {
+        margin-bottom: 10px;
+    }
+
+    .list_routs .list__item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .features .title-section {
+        max-width: 95%;
+    }
+
+    .features .list__item {
+        margin: 0 0 30px;
+    }
+
+    .footer-page h3,
+    .email-footer,
+    .email-footer a {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+    }
+
+    .email-footer a {
+        font-style: italic;
+    }
+
+    .phones-title,
+    .phohes_footer,
+    .email-footer,
+    .social-title {
+        margin-bottom: 20px;
+    }
+
+    .email-footer,
+    .phohes_footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__social,
+    .law {
+        margin-bottom: 40px;
+    }
+
+    /* .header-page.open .messengers {
+        display: flex;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    } */
+
+    .header-page.open .close-menu {
+        right: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .item-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .rates .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .rates__title {
+        order: 1;
+        /* margin-top: -35px; */
+        font-size: 26px;
+    }
+
+    .rates__thumb {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rates__thumb img {
+        /* margin: 0 0 auto; */
+    }
+
+    .rates__content {
+        margin-bottom: 30px;
+    
+    }
+}
