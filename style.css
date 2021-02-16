@@ -146,6 +146,8 @@ textarea {
 /* header */
 .header-page {
     padding: 20px 0;
+    background: rgba(255, 254, 232, 0.5);
+
 }
 
 .container_header {
@@ -376,10 +378,6 @@ textarea {
     font-size: 40px;
     line-height: 50px;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.main-title span {
-    font-weight: 500;
 }
 
 .messengers__hero {
@@ -1152,9 +1150,6 @@ form .order-btn {
     /* about page end*/
 }
 @media (max-width: 1100px) {
-    /* .logo__text h1 {
-        margin-right: 15px;
-    } */
 
     .phones_header {
         display: none;
@@ -1168,6 +1163,10 @@ form .order-btn {
 
     .logo__text h1 {
         margin-right: 15px;
+    }
+
+    .main-title {
+        max-width: 90%;
     }
 
     h2 {
@@ -1226,6 +1225,14 @@ form .order-btn {
         font-size: 14px;
         line-height: 14px;
         margin-right: 20px;
+    }
+
+    .list_routs .list__item {
+        width: calc(100% / 2 - 30px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        /* min-height: 250px; */
     }
 
     /* about page */
@@ -1294,9 +1301,6 @@ form .order-btn {
     .main-title {
         display: flex;
         flex-direction: column;
-    }
-
-    .main-title span {
         font-size: 30px;
         line-height: 40px;
     }
@@ -1459,13 +1463,6 @@ form .order-btn {
         justify-content: center;
     }
 
-    .list_routs .list__item {
-        width: calc(100% / 2 - 30px);
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
-        min-height: 250px;
-    }
 
     /* footer */
 
@@ -1574,8 +1571,8 @@ form .order-btn {
     }
 
     .logo__round {
-       width: 60px;
-       height: 60px;
+        width: 60px;
+        height: 60px;
     }
     .phones-block {
         font-size: 20px;
@@ -1695,7 +1692,6 @@ form .order-btn {
         display: none;
     }
 
-  
     .phones-block {
         display: none;
     }
@@ -1712,13 +1708,10 @@ form .order-btn {
     .main-title {
         display: flex;
         flex-direction: column;
-        font-size: 20px;
-        line-height: 4px;
-    }
-
-    .main-title span {
+        max-width: 80%;
         font-size: 18px;
-        font-weight: normal;
+        line-height: 20px;
+        color: var(--titles);
     }
 
     .hero {
