@@ -1866,3 +1866,65 @@ form .order-btn {
         margin-bottom: 30px;
     }
 }
+
+
+/* CAROUSEL */
+
+
+.owl-carousel {
+    width: calc(100% - 150px) !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.owl-prev span,
+.owl-next span {
+    display: none;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -55px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-image: url(./img/arrow-prew.svg) !important;
+    background-position: center !important;
+}
+
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -55px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-image: url(./img/arrow-next.svg) !important;
+    background-position: center !important;
+}
+
+.header-slide {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #19017A;
+    margin-bottom: 40px;
+}
+
+.content-slide {
+    font-size: 22px;
+    line-height: 42px;
+    color: #27323A;
+    line-height: 42px;
+}

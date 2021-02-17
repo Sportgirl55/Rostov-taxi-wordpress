@@ -78,5 +78,30 @@ if( $image ) {
 
   </section><!-- about -->
 
+  <div class="owl-carousel">
+
+    <?php
+              $args_news = array(
+                'cat'=> 5,
+                  'showposts' => 150,
+                  'offset' => 0,
+              );
+              $recent = new WP_Query($args_news);
+              while($recent->have_posts()) : $recent->the_post();
+            ?>
+
+
+    <div class="item-crousel">
+      <header class="header-slide"><?php the_title() ?></header>
+      <div class="content-slide">
+        <?php the_content() ?>
+      </div><!-- content-slide -->
+    </div>
+
+    <?php endwhile; wp_reset_query(); ?>
+
+  </div><!-- owl-carousel -->
+
+
 </main>
 <?php get_footer(); ?>

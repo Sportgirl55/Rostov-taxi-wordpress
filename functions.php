@@ -5,9 +5,13 @@
  * загружаемые скрипты и стили
  */
 function load_style_script(){
+ 
+   	wp_enqueue_script('carousel', get_template_directory_uri() . '/js/owl.carousel.min.js');
    	wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js');
   
     wp_enqueue_style('wp-editor', get_template_directory_uri() . '/css/wp-editor.css');
+    wp_enqueue_style('carousel-css', get_template_directory_uri() . '/css/owl.carousel.min.css');
+    wp_enqueue_style('owl', get_template_directory_uri() . '/css/owl.theme.default.min.css');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 }
 

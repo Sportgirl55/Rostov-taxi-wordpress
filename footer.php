@@ -20,7 +20,7 @@
         <li><a href="/">Главная</a></li>
         <li><a href="/#services">Услуги</a></li>
         <li><a href="/#routs">Направления</a></li>
-        <li><a href="http://sveta-wp/бронирование/">Бронирование</a></li>
+        <li><a href="http://sveta-wp/bronirovanie/">Бронирование</a></li>
         <li><a href="http://sveta-wp/o-nas/">О нас</a></li>
         <li><a href="/#contact">Контакты</a></li>
       </ul>
