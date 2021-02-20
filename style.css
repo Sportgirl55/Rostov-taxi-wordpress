@@ -60,7 +60,6 @@ p {
 }
 
 h2 {
-    font-family: Montserrat Alternates;
     text-align: center;
     font-style: normal;
     font-weight: bold;
@@ -90,7 +89,6 @@ input[type="tel"],
 input[type="email"],
 input[type="button"],
 input[type="date"],
-input[type="submit"],
 input[type="number"],
 input[type="time"],
 textarea {
@@ -147,7 +145,6 @@ textarea {
 .header-page {
     padding: 20px 0;
     background: rgba(255, 254, 232, 0.5);
-
 }
 
 .container_header {
@@ -267,7 +264,7 @@ textarea {
 }
 
 .logo__text h1 span {
-    color: #19017a;
+    color: var(--titles);
 }
 
 .logo__text-tiny {
@@ -560,14 +557,11 @@ textarea {
 }
 
 .booking p {
-    font-family: "Montserrat Alternates";
-    font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
     display: flex;
     align-items: center;
-    text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     margin-bottom: 40px;
@@ -584,6 +578,7 @@ textarea {
 }
 
 .order-btn {
+    display: inline-block;
     padding: 11px 43px 11px 15px;
     border: 2px solid var(--green);
     color: rgba(2, 134, 31, 0.8);
@@ -595,8 +590,9 @@ textarea {
     background-position: right 12px center;
     font-weight: bold;
     font-size: 20px;
-    font-family: "Montserrat Alternates", serif;
     text-decoration: none;
+    outline: none;
+    cursor: pointer;
     border-radius: 20px;
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
 }
@@ -1150,7 +1146,6 @@ form .order-btn {
     /* about page end*/
 }
 @media (max-width: 1100px) {
-
     .phones_header {
         display: none;
     }
@@ -1166,7 +1161,7 @@ form .order-btn {
     }
 
     .main-title {
-        max-width: 90%;
+        max-width: 70%;
     }
 
     h2 {
@@ -1462,7 +1457,6 @@ form .order-btn {
     .list_routs {
         justify-content: center;
     }
-
 
     /* footer */
 
@@ -1867,9 +1861,7 @@ form .order-btn {
     }
 }
 
-
 /* CAROUSEL */
-
 
 .owl-carousel {
     width: calc(100% - 150px) !important;
@@ -1918,13 +1910,44 @@ form .order-btn {
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
-    color: #19017A;
+    color: var(--titles);
     margin-bottom: 40px;
 }
 
 .content-slide {
     font-size: 22px;
     line-height: 42px;
-    color: #27323A;
+    color: #27323a;
     line-height: 42px;
+}
+
+
+/* SEND-PAGE  */
+
+.page__send {
+    text-align: center;
+}
+
+.send__message {
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 100px;
+}
+
+.send__success {
+    color: #00861F;
+}
+
+.send__no-success {
+    color: #FD150D;
+}
+
+.page__send a {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 2px solid rgba(2, 134, 31, 0.8);
+    color: rgba(2, 134, 31, 0.8);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }

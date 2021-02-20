@@ -174,7 +174,9 @@ Template Name: Страница - бронирование
         </div>
       </div>
 
-      <button class="order-btn" type="submit">Забронировать</button>
+      <input id="check-s" name="check" type="hidden" value="" />
+      <input class="order-btn" type="submit" value="Забронировать" onclick="document.getElementById('check-s').value = 'stopSpam';">
+   
     </form>
   </div>
 </main>

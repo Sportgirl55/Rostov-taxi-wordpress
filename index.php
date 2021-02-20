@@ -72,7 +72,7 @@ Template Name: Шаблон для главной
           <?php include 'includes/social.php'?><?php include 'includes/messengers.php'?>
         </ul>
 
-        <p class="item-title">Заполнить форму <a href="http://sveta-wp/bronirovanie/">бронирования</a></p>
+        <p class="item-title">Заполнить форму <a href="https://taxiizrostova.ru/bronirovanie">бронирования</a></p>
       </div><!-- contacts__item -->
     </div><!-- container -->
   </section><!-- servises -->
@@ -80,8 +80,8 @@ Template Name: Шаблон для главной
   <div class="booking">
     <p class="booking__slogan">Забронируйте поездку прямо сейчас</p>
     <p class="booking__call">Позвоните нам <?php include 'includes/phones.php'?></p>
-    <p class="booking__online">или забронируйте <a href="http://sveta-wp/bronirovanie/">онлайн</a> на сайте</p>
-    <a class="order-btn" href="http://sveta-wp/bronirovanie/">Забронировать</a>
+    <p class="booking__online">или забронируйте <a href="https://taxiizrostova.ru/bronirovanie">онлайн</a> на сайте</p>
+    <a class="order-btn" href="https://taxiizrostova.ru/bronirovanie">Забронировать</a>
   </div><!-- booking -->
 
   <div class="rates">
@@ -112,7 +112,7 @@ Template Name: Шаблон для главной
           </div>
 
           <div class="booking__btn">
-            <a class="booking__link" href="http://sveta-wp/bronirovanie/">Заказать</a>
+            <a class="booking__link" href="https://taxiizrostova.ru/bronirovanie">Заказать</a>
           </div>
         </li><!-- list__item -->
 
@@ -169,7 +169,7 @@ Template Name: Шаблон для главной
         <li class="list__item">
           <img class="routs__img" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title() ?>">
           <h3 class="routs__title"><?php the_title() ?></h3>
-          <a class="booking__link" href="http://sveta-wp/bronirovanie/?title=<?php the_title() ?>">Заказать</a>
+          <a class="booking__link" href="https://taxiizrostova.ru/bronirovanie?title=<?php the_title() ?>">Заказать</a>
           <div class="routs__overlay"></div>
         </li><!-- list__item -->
 

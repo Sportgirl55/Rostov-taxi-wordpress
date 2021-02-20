@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&family=Open+Sans:wght@400;700&family=Roboto:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <title>РостовЮгТрансфер</title>
@@ -46,8 +46,8 @@
             <li><a href="/">Главная</a></li>
             <li><a href="/#services">Услуги</a></li>
             <li><a href="/#routs">Направления</a></li>
-            <li><a href="http://sveta-wp/bronirovanie/">Бронирование</a></li>
-            <li><a href="http://sveta-wp/o-nas/">О нас</a></li>
+            <li><a href="https://taxiizrostova.ru/bronirovanie">Бронирование</a></li>
+            <li><a href="https://taxiizrostova.ru/o-nas">О нас</a></li>
             <li><a href="/#contact">Контакты</a></li>
           </ul>
           <button class="hamb" type="button">

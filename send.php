@@ -45,6 +45,8 @@ $message =
 'Встреча с табличкой* ' . $tablet . "\n" .
 'Молчаливый водитель ' . $driver . "\n";
 
+if ($_POST['check'] != 'stopSpam') exit('Spam decected');
+
 mail ( $email_admin , $subject , $message );
   
 ?>
@@ -55,7 +57,12 @@ mail ( $email_admin , $subject , $message );
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Форма бронирования</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -63,11 +70,11 @@ mail ( $email_admin , $subject , $message );
     <?php
   if (mail) {
   ?>
-    <p>Ваша заявка успешно отправлена!</p>
+    <p class="send__success send__message">Ваша заявка успешно отправлена!</p>
     <a href="/">Вернуться на главную</a>
     <?php } else {
     ?>
-    <p>Ваша заявка не отправлена!Попробуйте ещё раз</p>
+    <p class="send__no-success send__message">Ваша заявка не отправлена!Попробуйте ещё раз</p>
     <a href="/">Вернуться на главную</a>
     <?php } ?>
   </div>

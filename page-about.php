@@ -77,9 +77,9 @@ if( $image ) {
     </div><!-- transfer -->
 
   </section><!-- about -->
-
+ <h2 class="title-section">Отзывы наших клиентов</h2>
   <div class="owl-carousel">
-
+ 
     <?php
               $args_news = array(
                 'cat'=> 5,
